@@ -18,7 +18,7 @@ public class ExampleCommand extends Command {
 	protected void initialize() {
 	}
 
-	// Called repeatedly when this Command is scheduled to run
+	// Called repeatedly when this Command is scheduled to run, stops when isFinished returns true
 	@Override
 	protected void execute() {
 	}
