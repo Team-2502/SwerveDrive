@@ -7,13 +7,47 @@ package com.team2502.swervedrive;
  * floating around.
  */
 public class RobotMap {
-	// For example to map the left and right motors, you could define the
-	// following variables to use with your drivetrain subsystem.
-	// public static int leftMotor = 1;
-	// public static int rightMotor = 2;
 
-	// If you are using multiple modules, make sure to define both the port
-	// number and the module. For example you with a rangefinder:
-	// public static int rangefinderPort = 1;
-	// public static int rangefinderModule = 1;
+    private RobotMap() {}
+
+    public static final class JoyStick
+    {
+        //define joysticks here
+        //EX: public static final int JOYSTICK_DRIVE_LEFT = 1;
+
+        private JoyStick() {};
+
+        public static final class Button
+        {
+            //define buttons here
+            //EX: public static final int GO_SLOW = 1;
+
+            private Button() {}
+        }
+    }
+
+    public static final class Electrical { private Electrical() {} }
+
+    public static final class Motor
+    {
+        public static int CIM_TALON_0 = 1;
+        public static int BANE_Talon_0 = 2;
+        public static int CIM_TALON_1 = 3;
+        public static int BANE_Talon_1 = 4;
+        public static int CIM_TALON_2 = 5;
+        public static int BANE_Talon_2 = 6;
+        public static int CIM_TALON_3 = 7;
+        public static int BANE_Talon_3 = 8;
+
+        private Motor() {}
+    }
+
+    public static final class Solenoid
+    {
+        //Define Solenoid here
+        //EX: public static final int TRANSMISSION_SWITCH = 0;
+
+        private Solenoid() {}
+    }
+
 }
