@@ -24,7 +24,6 @@ public class SwerveSubsystem extends Subsystem
     public final CANTalon cimTalon3;
     public final CANTalon baneTalon3;
 
-
     public SwerveSubsystem()
     {
         baneTalon0 = new CANTalon(RobotMap.Motor.BANE_Talon_0);
@@ -36,11 +35,15 @@ public class SwerveSubsystem extends Subsystem
         baneTalon3 = new CANTalon(RobotMap.Motor.BANE_Talon_3);
         cimTalon3 = new CANTalon(RobotMap.Motor.CIM_TALON_3);
 
+
     }
 
     @Override
-    protected void initDefaultCommand()
+    protected void initDefaultCommand() {  setDefaultCommand(new SwerveDriveCommand());}
+
+    public void drive()
     {
 
     }
+
 }

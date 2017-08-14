@@ -10,12 +10,13 @@ public class RobotMap {
 
     private RobotMap() {}
 
-    public static final class JoyStick
+    public static final class Joystick
     {
         //define joysticks here
-        //EX: public static final int JOYSTICK_DRIVE_LEFT = 1;
+        public static final int JOYSTICK_DRIVE_LEFT = 1;
+        public static final int JOYSTICK_DRIVE_RIGHT = 0;
 
-        private JoyStick() {}
+        private Joystick() {}
 
         public static final class Button
         {
