@@ -13,8 +13,9 @@ public class RobotMap {
     public static final class Joystick
     {
         //define joysticks here
-        public static final int JOYSTICK_DRIVE_LEFT = 1;
-        public static final int JOYSTICK_DRIVE_RIGHT = 0;
+        public static final int JOYSTICK_DRIVE_LEFT = 0;
+        public static final int JOYSTICK_DRIVE_RIGHT = 1;
+        public static final int JOYSTICK_FUNCTION = 2;
 
         private Joystick() {}
 

@@ -1,6 +1,7 @@
 
 package com.team2502.swervedrive;
 
+import com.team2502.swervedrive.subsystems.SwerveSubsystem;
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
@@ -20,11 +21,11 @@ import com.team2502.swervedrive.subsystems.ExampleSubsystem;
  */
 public class Robot extends IterativeRobot {
 
-	public static final ExampleSubsystem exampleSubsystem = new ExampleSubsystem();
-	public static OI oi;
+	public static final SwerveSubsystem DRIVE_TRAIN = new SwerveSubsystem();
 
+	/*
 	Command autonomousCommand;
-	SendableChooser<Command> chooser = new SendableChooser<>();
+	SendableChooser<Command> chooser = new SendableChooser<>();*/
 
 	/**
 	 * This function is run when the robot is first started up and should be
@@ -32,10 +33,11 @@ public class Robot extends IterativeRobot {
 	 */
 	@Override
 	public void robotInit() {
-		oi = new OI();
+		/*
 		chooser.addDefault("Default Auto", new ExampleCommand());
 		// chooser.addObject("My Auto", new MyAutoCommand());
-		SmartDashboard.putData("Auto mode", chooser);
+		SmartDashboard.putData("Auto mode", chooser); */
+		OI.init();
 	}
 
 	/**
@@ -66,7 +68,8 @@ public class Robot extends IterativeRobot {
 	 */
 	@Override
 	public void autonomousInit() {
-		autonomousCommand = chooser.getSelected();
+
+		//autonomousCommand = chooser.getSelected();
 
 		/*
 		 * String autoSelected = SmartDashboard.getString("Auto Selector",
@@ -76,8 +79,10 @@ public class Robot extends IterativeRobot {
 		 */
 
 		// schedule the autonomous command (example)
+		/*
 		if (autonomousCommand != null)
 			autonomousCommand.start();
+		*/
 	}
 
 	/**
@@ -94,8 +99,10 @@ public class Robot extends IterativeRobot {
 		// teleop starts running. If you want the autonomous to
 		// continue until interrupted by another command, remove
 		// this line or comment it out.
+		/*
 		if (autonomousCommand != null)
 			autonomousCommand.cancel();
+			*/
 	}
 
 	/**

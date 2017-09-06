@@ -5,18 +5,27 @@ package com.team2502.swervedrive.commands;
  */
 
 import com.team2502.swervedrive.Robot;
+import com.team2502.swervedrive.subsystems.SwerveSubsystem;
 import edu.wpi.first.wpilibj.command.Command;
 
 public class SwerveDriveCommand extends Command
 {
+    private final SwerveSubsystem swerveDrive;
 
-    public SwerveDriveCommand() {}
+    public SwerveDriveCommand()
+    {
+        requires(Robot.DRIVE_TRAIN);
+        swerveDrive = Robot.DRIVE_TRAIN;
+    }
 
     @Override
     protected void initialize() {}
 
     @Override
-    protected void execute() {}
+    protected void execute()
+    {
+        swerveDrive.drive();
+    }
 
     @Override
     protected boolean isFinished() {
